@@ -1,9 +1,15 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <header>
+    <nav>
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/news">new</router-link> |
+      <router-link to="/product">product</router-link> |
+    </nav>
+  </header>
+  <router-view />
+
+  <footer>footer</footer>
 </template>
 
 <style lang="scss">
@@ -15,16 +21,25 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+header {
+  background-color: rgb(187, 61, 61);
+  nav {
+    padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    a {
+      font-weight: bold;
+      color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: #42b983;
+      &.router-link-exact-active {
+        color: #42b983;
+      }
     }
   }
+}
+
+footer {
+  background-color: #ccc;
+  width: 100%;
+  height: 100px;
 }
 </style>
